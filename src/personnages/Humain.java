@@ -28,14 +28,14 @@ public class Humain {
 			return "Je n'ai plus que "+prix+"sous en poche. Je ne peux même pas m'offrir "+bien+" à "+argent+" sous";
 		}
 		else {
-			argent-=prix;
+			perdreArgent(prix);
 			return "j'ai "+argent+" sous en poche. Je vais pouvoir m'offrir "+bien+" à "+prix+" sous";
 		}
 	}
-	private void gagnerArgent(int gain) {
+	protected void gagnerArgent(int gain) {
 		argent+=gain;
 	}
-	private void perdreArgent(int perte) {
+	protected void perdreArgent(int perte) {
 		argent-=perte;
 	}
 	public void parler(String texte) {
